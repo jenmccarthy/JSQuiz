@@ -41,6 +41,9 @@ function checkAnswer() {
   }
   if(choice == questions[position][4]) {
     correct++;
+    alert("You are so smart!")
+  } else {
+    alert("Oops, you got that one wrong!")
   }
   position++;
   renderQuestion();
