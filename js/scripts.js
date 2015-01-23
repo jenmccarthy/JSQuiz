@@ -29,5 +29,10 @@ function renderQuestion() {
   test.innerHTML = "<h3>"+question+"</h3>";
   test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
   test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
-  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
+function checkAnswer() {
+  alert("OK we will");
+}
+window.addEventListner("load", renderQuestion, false);
