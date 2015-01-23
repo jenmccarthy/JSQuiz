@@ -33,6 +33,16 @@ function renderQuestion() {
   test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
 function checkAnswer() {
-  alert("OK we will");
+  choices = document.getElementsByName("choices");
+  for (var i=0; i<choices.length; i++) {
+    if(choice[i].checked) {
+      choice = choices[i].value;
+    }
+  }
+  if(choice === questions[position][4]) {
+    correct++;
+  }
+  pos++;
+  renderQuestion();
 }
 window.addEventListener("load", renderQuestion, false);
