@@ -35,4 +35,4 @@ function renderQuestion() {
 function checkAnswer() {
   alert("OK we will");
 }
-window.addEventListner("load", renderQuestion, false);
+window.addEventListener("load", renderQuestion, false);
