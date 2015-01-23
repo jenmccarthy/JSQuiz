@@ -21,6 +21,13 @@ function _(x) {
 }
 function renderQuestion() {
   test = _("test");
+  if(position >= questions.length) {
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>"
+    _("test_status").innerHTML = "Test Completed";
+    position = 0;
+    correct = 0;
+    return false;
+  }
   _("test_status").innerHTML = "Questions " +(position+1)+ " of "+questions.length;
   question = questions[position][0];
   chA = questions[position][1];
